@@ -26,11 +26,12 @@ namespace SharpGL_6.figures
                 Color.FromArgb(255, 60, 0, 64),
                 Color.FromArgb(255, 0, 128, 255),
                 Color.FromArgb(255, 100, 100, 100),
-                Color.FromArgb(255, 100, 100, 100)
+                Color.Crimson
             };
-            var k = 0;
+            var k = -1;
             foreach (var g in loadedObj.Groups)
             {
+                k = (k + 1) % colors.Length;
                 var color = colors[k++];
                 foreach (var f in g.Faces)
                 {
