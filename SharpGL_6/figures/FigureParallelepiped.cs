@@ -20,10 +20,10 @@ namespace SharpGL_6.figures
         {
         }
 
-        public void Draw(OpenGL gl, float ta, float ty, float tz, float angleX, float angleY, float z, 
+        public void Draw(OpenGL gl, float ta, float ty, float tz, float angleX, float angleY, float scale, float z, 
             bool isLine, bool isFill, bool isRotate)
         {
-            var scale = 0.6f;
+            scale = 0.6f * scale;
             
             gl.Translate(ta, ty, tz);
             gl.LookAt(0, 0, z, 0, 0, z + 10, 0 , 1, 0);

@@ -11,6 +11,7 @@ namespace SharpGL_6
         private bool lines = false;
         private bool fill = false;
         
+        
         public Form1()
         {
             InitializeComponent();
@@ -28,13 +29,25 @@ namespace SharpGL_6
         
         private float _angleX;
         private float _angleY;
+
+        private float _angle1;
+        private float _angle2;
+        private float _angle3;
+        private float _angle4;
+        private float _angle5;
+        
+        private float _scale1 = 1;
+        private float _scale2 = 1;
+        private float _scale3 = 1;
+        private float _scale4 = 1;
+        private float _scale5 = 1;
+        
         private int z;
         private Point _currentLocation = new Point(0, 0);
         
         private void openGLControl1_OpenGLDraw(object sender, RenderEventArgs args)
         {     
             var gl = openGLControl1.OpenGL;
-            var i = new int[100];
             
             gl.Enable(OpenGL.GL_BLEND);           // Разрешить прозрачность.
             gl.Enable(OpenGL.GL_POINT_SMOOTH);   // Разрешить сглаживание точек.
@@ -46,15 +59,15 @@ namespace SharpGL_6
             gl.ClearColor(1f, 1f, 1f, 1f);
             
             FormatOpenGL(gl);
-            _figureToilet.Draw(gl, 8f, 0f, -25f, _angleX, _angleY, z, lines, fill, false);
+            _figureToilet.Draw(gl, 8f, 0f, -25f, _angle1, _angle1, _scale1, z, lines, fill, true);
             FormatOpenGL(gl);
-            _figureHummer.Draw(gl, -3f, 0.5f, -10f, _angleX, _angleY, z, lines, fill, false);
+            _figureHummer.Draw(gl, -3f, 0.5f, -10f, _angle2, _angle2, _scale2, z, lines, fill, true);
             FormatOpenGL(gl);
-            _figureKub.Draw(gl, -1.3f, -1.8f, -6f, _angleX, _angleY, z, lines, fill, false);
+            _figureKub.Draw(gl, -1.3f, -1.8f, -6f, _angle3, _angle3, _scale3, z, lines, fill, true);
             FormatOpenGL(gl);
-            _figureParallelepiped.Draw(gl, 1.2f, -1.8f, -6f, _angleX, _angleY, z, lines, fill, false);
+            _figureParallelepiped.Draw(gl, 1.2f, -1.8f, -6f, _angle4, _angle4, _scale4, z, lines, fill, true);
             FormatOpenGL(gl);
-            _figureTriangle.Draw(gl, 0f, 1.8f, -6f, _angleX, _angleY, z, lines, fill, false);
+            _figureTriangle.Draw(gl, 0f, 1.8f, -6f, _angle5, _angle5, _scale5, z, lines, fill, true);
         }
 
         private void FormatOpenGL(OpenGL gl)
@@ -93,6 +106,32 @@ namespace SharpGL_6
                     break;
                 case Keys.A:
                     _mainAngle -= 1;
+                    break;
+                    
+                case Keys.Q:
+                    _angle1 += e.Shift ? -1 : 1;
+                    if (e.Alt)
+                        _scale1 += e.Shift ? -0.1f : 0.1f;
+                    break;
+                case Keys.W:
+                    _angle2 += e.Shift ? -1 : 1;
+                    if (e.Alt)
+                        _scale2 += e.Shift ? -0.1f : 0.1f;
+                    break;
+                case Keys.E:
+                    _angle3 += e.Shift ? -1 : 1;
+                    if (e.Alt)
+                        _scale3 += e.Shift ? -0.1f : 0.1f;
+                    break;
+                case Keys.R:
+                    _angle4 += e.Shift ? -1 : 1;
+                    if (e.Alt)
+                        _scale4 += e.Shift ? -0.1f : 0.1f;
+                    break;
+                case Keys.T:
+                    _angle5 += e.Shift ? -1 : 1;
+                    if (e.Alt)
+                        _scale5 += e.Shift ? -0.1f : 0.1f;
                     break;
             }
         }

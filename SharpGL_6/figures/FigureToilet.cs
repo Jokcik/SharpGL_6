@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using KB_LAB_5.Classes;
 using SharpGL;
+using SharpGL.Enumerations;
+using SharpGL.SceneGraph;
 
 namespace SharpGL_6.figures
 {
@@ -14,10 +16,10 @@ namespace SharpGL_6.figures
                 "G:\\универ\\4 курс\\компьютерная графика\\Kompyuteraya_grafika\\Компьютерая графика\\obj файлы\\Toilet.obj");
         }
 
-        public void Draw(OpenGL gl, float ta, float ty, float tz, float angleX, float angleY, float z, 
+        public void Draw(OpenGL gl, float ta, float ty, float tz, float angleX, float angleY, float scale, float z, 
             bool isLine, bool isFill, bool isRotate)
         {
-            var scale = 0.03;
+            scale = 0.03f * scale;
 
             gl.Translate(ta, ty, tz);
             gl.Scale(scale, scale, scale);
