@@ -14,7 +14,8 @@ namespace SharpGL_6.figures
                 "G:\\универ\\4 курс\\компьютерная графика\\Kompyuteraya_grafika\\Компьютерая графика\\obj файлы\\Hammer.obj");
         }
         
-        public void Draw(OpenGL gl, float ta, float ty, float tz, float angleX, float angleY, float z)
+        public void Draw(OpenGL gl, float ta, float ty, float tz, float angleX, float angleY, float z, 
+            bool isLine, bool isFill)
         {
             var scale = 0.05;
             gl.LoadIdentity();
@@ -24,18 +25,23 @@ namespace SharpGL_6.figures
             gl.LookAt(0, 0, z, 0, 0, z + 10, 0 , 1, 0);
             gl.Rotate(angleX, 1f, 0f, 0f);
             gl.Rotate(angleY, 0f, 1f, 0f);
-            
-            foreach (var polygon in _polygons)
+
+            if (isFill || !isLine)
             {
-                gl.Begin(OpenGL.GL_POLYGON);
-                gl.Color(polygon.color.R, polygon.color.G, polygon.color.B);
-                foreach (var points in polygon.list)
+                foreach (var polygon in _polygons)
                 {
-                    gl.Vertex(points.Item1, points.Item2, points.Item3);
+                    gl.Begin(OpenGL.GL_POLYGON);
+                    gl.Color(polygon.color.R, polygon.color.G, polygon.color.B);
+                    foreach (var points in polygon.list)
+                    {
+                        gl.Vertex(points.Item1, points.Item2, points.Item3);
+                    }
+
+                    gl.End();
                 }
-                gl.End();
             }
-            
+
+            if (!isLine) return;
             foreach (var polygon in _polygons)
             {
                 gl.Begin(OpenGL.GL_LINE_STRIP);
@@ -44,9 +50,9 @@ namespace SharpGL_6.figures
                 {
                     gl.Vertex(points.Item1, points.Item2, points.Item3);
                 }
+
                 gl.End();
             }
-
         }
     }
 }

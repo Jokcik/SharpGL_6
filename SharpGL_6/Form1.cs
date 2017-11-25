@@ -7,9 +7,14 @@ namespace SharpGL_6
 {   
     public partial class Form1 : Form
     {
+        private bool lines = false;
+        private bool fill = false;
+        
         public Form1()
         {
             InitializeComponent();
+            checkBoxLines.CheckedChanged += (sender, args) => lines = !lines;
+            checkBoxFill.CheckedChanged += (sender, args) => fill = !fill;
         }
         
         private readonly FigureHummer _figureHummer = new FigureHummer();
@@ -22,18 +27,18 @@ namespace SharpGL_6
         private float _angleY;
         private int z;
         private Point _currentLocation = new Point(0, 0);
-    
+        
         private void openGLControl1_OpenGLDraw(object sender, RenderEventArgs args)
         {     
             var gl = openGLControl1.OpenGL;
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
             gl.ClearColor(1f, 1f, 1f, 1f);
     
-            _figureToilet.Draw(gl, 15f, 0f, -25f, _angleX, _angleY, z);
-            _figureHummer.Draw(gl, -5f, 0.5f, -10f, _angleX, _angleY, z);
-            _figureToileKub.Draw(gl, -1.3f, -1.3f, -6f, _angleX, _angleY, z);
-            _figureToileParallelepiped.Draw(gl, 1.2f, -1.3f, -6f, _angleX, _angleY, z);
-            _figureTriangle.Draw(gl, 0f, 1.3f, -6f, _angleX, _angleY, z);
+            _figureToilet.Draw(gl, 15f, 0f, -25f, _angleX, _angleY, z, lines, fill);
+            _figureHummer.Draw(gl, -5f, 0.5f, -10f, _angleX, _angleY, z, lines, fill);
+            _figureToileKub.Draw(gl, -1.3f, -1.3f, -6f, _angleX, _angleY, z, lines, fill);
+            _figureToileParallelepiped.Draw(gl, 1.2f, -1.3f, -6f, _angleX, _angleY, z, lines, fill);
+            _figureTriangle.Draw(gl, 0f, 1.3f, -6f, _angleX, _angleY, z, lines, fill);
         }
 
         protected override void OnMouseWheel(MouseEventArgs e)

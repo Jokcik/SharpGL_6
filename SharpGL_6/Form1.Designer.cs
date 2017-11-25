@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.openGLControl1 = new SharpGL.OpenGLControl();
+            this.checkBoxLines = new System.Windows.Forms.CheckBox();
+            this.checkBoxFill = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.openGLControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,22 +50,47 @@
             this.openGLControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.openGLControl1_MouseDown);
             this.openGLControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.openGLControl1_MouseMove);
             // 
+            // checkBoxLines
+            // 
+            this.checkBoxLines.AutoSize = true;
+            this.checkBoxLines.Location = new System.Drawing.Point(13, 13);
+            this.checkBoxLines.Name = "checkBoxLines";
+            this.checkBoxLines.Size = new System.Drawing.Size(107, 17);
+            this.checkBoxLines.TabIndex = 1;
+            this.checkBoxLines.Text = "Вывести контур";
+            this.checkBoxLines.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxFill
+            // 
+            this.checkBoxFill.AutoSize = true;
+            this.checkBoxFill.Location = new System.Drawing.Point(13, 37);
+            this.checkBoxFill.Name = "checkBoxFill";
+            this.checkBoxFill.Size = new System.Drawing.Size(69, 17);
+            this.checkBoxFill.TabIndex = 2;
+            this.checkBoxFill.Text = "Заливка";
+            this.checkBoxFill.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.checkBoxFill);
+            this.Controls.Add(this.checkBoxLines);
             this.Controls.Add(this.openGLControl1);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.openGLControl1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private SharpGL.OpenGLControl openGLControl1;
+        private System.Windows.Forms.CheckBox checkBoxLines;
+        private System.Windows.Forms.CheckBox checkBoxFill;
     }
 }
 
