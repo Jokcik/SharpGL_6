@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\jokci\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_SharpGL_6.-2115978005.00" t="ExcludeRecursive" />
+    <e p="C:\Users\jokci\Documents\Visual Studio 2015\Projects\SharpGL_6" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="SharpGL_6" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CjClutter.ObjLoader.Loader.dll" t="Include" />
+        <e p="figures" t="Include">
+          <e p="FigureHummer.cs" t="Include" />
+          <e p="FigureToilet.cs" t="Include" />
+          <e p="LoadPrimitive.cs" t="Include" />
+        </e>
+        <e p="Form1.cs" t="Include" />
+        <e p="Form1.Designer.cs" t="Include" />
+        <e p="Form1.resx" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Polygon.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="SharpGL_6.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="SharpGL_6.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
