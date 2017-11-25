@@ -21,17 +21,23 @@ namespace SharpGL_6.figures
         }
 
         public void Draw(OpenGL gl, float ta, float ty, float tz, float angleX, float angleY, float z, 
-            bool isLine, bool isFill)
+            bool isLine, bool isFill, bool isRotate)
         {
-            gl.LoadIdentity();
-
+            var scale = 0.6f;
+            
             gl.Translate(ta, ty, tz);
-            gl.Rotate(angleX, 1f, 0f, 0f);
-            gl.Rotate(angleY, 0f, 1f, 0f);
+            gl.LookAt(0, 0, z, 0, 0, z + 10, 0 , 1, 0);
+            gl.Scale(scale, scale, scale);
+            if (isRotate)
+            {
+                gl.Rotate(angleX, 1f, 0f, 0f);
+                gl.Rotate(angleY, 0f, 1f, 0f);
+            }
 
             if (isFill || !isLine)
             {
                 gl.Begin(OpenGL.GL_QUAD_STRIP);
+                
                 gl.Color(1f, 1f, 0f);
                 gl.Vertex(-a / 2, -b / 2, -c / 2);
                 gl.Vertex(-a / 2, -b / 2, c / 2);
@@ -64,6 +70,8 @@ namespace SharpGL_6.figures
                 gl.Vertex(-a / 2, b / 2, -c / 2);
                 gl.Vertex(a / 2, b / 2, -c / 2);
                 gl.Vertex(a / 2, -b / 2, -c / 2);
+                
+
                 gl.End();
             }
 

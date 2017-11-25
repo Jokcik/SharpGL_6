@@ -5,14 +5,18 @@ namespace SharpGL_6.figures
     public class FigureTriangle
     {
         public void Draw(OpenGL gl, float ta, float ty, float tz, float angleX, float angleY, float z, 
-            bool isLine, bool isFill)
+            bool isLine, bool isFill, bool isRotate)
         {
-            gl.LoadIdentity();
-
+            var scale = 0.5f;
+            
             gl.Translate(ta, ty, tz);
-            gl.Rotate(angleX, 1f, 0f, 0f);
-            gl.Rotate(angleY, 0f, 1f, 0f);
-
+            gl.LookAt(0, 0, z, 0, 0, z + 10, 0 , 1, 0);
+            gl.Scale(scale, scale, scale);
+            if (isRotate)
+            {
+                gl.Rotate(angleX, 1f, 0f, 0f);
+                gl.Rotate(angleY, 0f, 1f, 0f);
+            }
             if (isFill || !isLine)
             {
                 gl.Begin(OpenGL.GL_TRIANGLES);

@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 using SharpGL;
+using SharpGL.SceneGraph;
 using SharpGL_6.figures;
 
 namespace SharpGL_6
@@ -19,9 +20,11 @@ namespace SharpGL_6
         
         private readonly FigureHummer _figureHummer = new FigureHummer();
         private readonly FigureToilet _figureToilet = new FigureToilet();
-        private readonly FigureParallelepiped _figureToileKub = new FigureParallelepiped();
-        private readonly FigureParallelepiped _figureToileParallelepiped = new FigureParallelepiped(2, 0.5f, 1);
+        private readonly FigureParallelepiped _figureKub = new FigureParallelepiped();
+        private readonly FigureParallelepiped _figureParallelepiped = new FigureParallelepiped(2, 0.5f, 1);
         private readonly FigureTriangle _figureTriangle = new FigureTriangle();
+
+        private float _mainAngle;
         
         private float _angleX;
         private float _angleY;
@@ -31,14 +34,33 @@ namespace SharpGL_6
         private void openGLControl1_OpenGLDraw(object sender, RenderEventArgs args)
         {     
             var gl = openGLControl1.OpenGL;
+            var i = new int[100];
+            
+            gl.Enable(OpenGL.GL_BLEND);           // Разрешить прозрачность.
+            gl.Enable(OpenGL.GL_POINT_SMOOTH);   // Разрешить сглаживание точек.
+            gl.Enable(OpenGL.GL_COLOR_MATERIAL); // Отключить перелевание цвета.
+            gl.PointSize(16);             // Размер точки.
+            gl.LineWidth(2);              // Толщина линий.
+            
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
             gl.ClearColor(1f, 1f, 1f, 1f);
-    
-            _figureToilet.Draw(gl, 15f, 0f, -25f, _angleX, _angleY, z, lines, fill);
-            _figureHummer.Draw(gl, -5f, 0.5f, -10f, _angleX, _angleY, z, lines, fill);
-            _figureToileKub.Draw(gl, -1.3f, -1.3f, -6f, _angleX, _angleY, z, lines, fill);
-            _figureToileParallelepiped.Draw(gl, 1.2f, -1.3f, -6f, _angleX, _angleY, z, lines, fill);
-            _figureTriangle.Draw(gl, 0f, 1.3f, -6f, _angleX, _angleY, z, lines, fill);
+            
+            FormatOpenGL(gl);
+            _figureToilet.Draw(gl, 8f, 0f, -25f, _angleX, _angleY, z, lines, fill, false);
+            FormatOpenGL(gl);
+            _figureHummer.Draw(gl, -3f, 0.5f, -10f, _angleX, _angleY, z, lines, fill, false);
+            FormatOpenGL(gl);
+            _figureKub.Draw(gl, -1.3f, -1.8f, -6f, _angleX, _angleY, z, lines, fill, false);
+            FormatOpenGL(gl);
+            _figureParallelepiped.Draw(gl, 1.2f, -1.8f, -6f, _angleX, _angleY, z, lines, fill, false);
+            FormatOpenGL(gl);
+            _figureTriangle.Draw(gl, 0f, 1.8f, -6f, _angleX, _angleY, z, lines, fill, false);
+        }
+
+        private void FormatOpenGL(OpenGL gl)
+        {
+            gl.LoadIdentity();
+            gl.Rotate(_mainAngle, 0, 0, 1);
         }
 
         protected override void OnMouseWheel(MouseEventArgs e)
@@ -60,5 +82,20 @@ namespace SharpGL_6
             if (e.Button != MouseButtons.Left) return;
             _currentLocation = e.Location;
         }
+
+
+        private void openGLControl1_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.D:
+                    _mainAngle += 1;
+                    break;
+                case Keys.A:
+                    _mainAngle -= 1;
+                    break;
+            }
+        }
+
     }
 }

@@ -15,16 +15,19 @@ namespace SharpGL_6.figures
         }
 
         public void Draw(OpenGL gl, float ta, float ty, float tz, float angleX, float angleY, float z, 
-            bool isLine, bool isFill)
+            bool isLine, bool isFill, bool isRotate)
         {
-            var scale = 0.05;
-            gl.LoadIdentity();
+            var scale = 0.03;
 
             gl.Translate(ta, ty, tz);
             gl.Scale(scale, scale, scale);
             gl.LookAt(0, 0, z, 0, 0, z + 10, 0, 1, 0);
-            gl.Rotate(angleX, 1f, 0f, 0f);
-            gl.Rotate(angleY, 0f, 1f, 0f);
+            if (isRotate)
+            {
+                gl.Rotate(angleX, 1f, 0f, 0f);
+                gl.Rotate(angleY, 0f, 1f, 0f);
+            }
+            
 
             if (isFill || !isLine)
             {
@@ -40,7 +43,7 @@ namespace SharpGL_6.figures
                     gl.End();
                 }
             }
-
+            
             if (!isLine) return;
             foreach (var polygon in _polygons)
             {
