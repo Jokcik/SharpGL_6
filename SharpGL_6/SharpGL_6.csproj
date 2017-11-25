@@ -59,7 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="figures\FigureHummer.cs" />
+    <Compile Include="figures\FigureParallelepiped.cs" />
     <Compile Include="figures\FigureToilet.cs" />
+    <Compile Include="figures\FigureTriangle.cs" />
     <Compile Include="figures\LoadPrimitive.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

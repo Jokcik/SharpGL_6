@@ -14,6 +14,9 @@ namespace SharpGL_6
         
         private readonly FigureHummer _figureHummer = new FigureHummer();
         private readonly FigureToilet _figureToilet = new FigureToilet();
+        private readonly FigureParallelepiped _figureToileKub = new FigureParallelepiped();
+        private readonly FigureParallelepiped _figureToileParallelepiped = new FigureParallelepiped(2, 0.5f, 1);
+        private readonly FigureTriangle _figureTriangle = new FigureTriangle();
         
         private float _angleX;
         private float _angleY;
@@ -24,10 +27,13 @@ namespace SharpGL_6
         {     
             var gl = openGLControl1.OpenGL;
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT | OpenGL.GL_DEPTH_BUFFER_BIT);
+            gl.ClearColor(1f, 1f, 1f, 1f);
     
-            _figureToilet.Draw(gl, 5f, 0, -25f, _angleX, _angleY, z);
-            _figureHummer.Draw(gl, -5f, 0, -10f, _angleX, _angleY, z);
-
+            _figureToilet.Draw(gl, 15f, 0f, -25f, _angleX, _angleY, z);
+            _figureHummer.Draw(gl, -5f, 0.5f, -10f, _angleX, _angleY, z);
+            _figureToileKub.Draw(gl, -1.3f, -1.3f, -6f, _angleX, _angleY, z);
+            _figureToileParallelepiped.Draw(gl, 1.2f, -1.3f, -6f, _angleX, _angleY, z);
+            _figureTriangle.Draw(gl, 0f, 1.3f, -6f, _angleX, _angleY, z);
         }
 
         protected override void OnMouseWheel(MouseEventArgs e)

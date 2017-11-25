@@ -36,16 +36,16 @@ namespace SharpGL_6.figures
                 gl.End();
             }
             
-//            foreach (var polygon in _polygons)
-//            {
-//                gl.Begin(OpenGL.GL_LINE_STRIP);
-//                gl.Color(0, 0, 0);
-//                foreach (var points in polygon.list)
-//                {
-//                    gl.Vertex(points.Item1, points.Item2, points.Item3);
-//                }
-//                gl.End();
-//            }
+            foreach (var polygon in _polygons)
+            {
+                gl.Begin(OpenGL.GL_LINE_STRIP);
+                gl.Color(0, 0, 0);
+                foreach (var points in polygon.list)
+                {
+                    gl.Vertex(points.Item1, points.Item2, points.Item3);
+                }
+                gl.End();
+            }
         }
     }
 }

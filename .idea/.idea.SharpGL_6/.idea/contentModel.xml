@@ -10,7 +10,9 @@
         <e p="CjClutter.ObjLoader.Loader.dll" t="Include" />
         <e p="figures" t="Include">
           <e p="FigureHummer.cs" t="Include" />
+          <e p="FigureParallelepiped.cs" t="Include" />
           <e p="FigureToilet.cs" t="Include" />
+          <e p="FigureTriangle.cs" t="Include" />
           <e p="LoadPrimitive.cs" t="Include" />
         </e>
         <e p="Form1.cs" t="Include" />
