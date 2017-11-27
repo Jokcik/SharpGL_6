@@ -99,6 +99,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CjClutter.ObjLoader.Loader.dll" />
+    <Content Include="obj_files\Hammer.obj" />
+    <Content Include="obj_files\Toilet.obj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

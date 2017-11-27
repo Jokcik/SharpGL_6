@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\jokci\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_SharpGL_6.-2115978005.00" t="ExcludeRecursive" />
-    <e p="C:\Users\jokci\Documents\Visual Studio 2015\Projects\SharpGL_6" t="IncludeFlat">
+    <e p="C:\Users\User\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_SharpGL_6.-1628519260.00" t="ExcludeRecursive" />
+    <e p="C:\Users\User\RiderProjects\SharpGL_6" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="SharpGL_6" t="IncludeRecursive">
         <e p="App.config" t="Include" />
@@ -19,6 +19,10 @@
         <e p="Form1.Designer.cs" t="Include" />
         <e p="Form1.resx" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="obj_files" t="Include">
+          <e p="Hammer.obj" t="Include" />
+          <e p="Toilet.obj" t="Include" />
+        </e>
         <e p="Polygon.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">

@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using KB_LAB_5.Classes;
+﻿using System;
+using System.Collections.Generic;
 using SharpGL;
 using SharpGL.Enumerations;
 using SharpGL.SceneGraph;
@@ -12,8 +12,7 @@ namespace SharpGL_6.figures
 
         public FigureToilet()
         {
-            _polygons = LoadPrimitive.Load(
-                "G:\\универ\\4 курс\\компьютерная графика\\Kompyuteraya_grafika\\Компьютерая графика\\obj файлы\\Toilet.obj");
+            _polygons = LoadPrimitive.Load("C:\\Users\\User\\RiderProjects\\SharpGL_6\\SharpGL_6\\obj_files\\Toilet.obj");
         }
 
         public void Draw(OpenGL gl, float ta, float ty, float tz, float angleX, float angleY, float scale, float z, 

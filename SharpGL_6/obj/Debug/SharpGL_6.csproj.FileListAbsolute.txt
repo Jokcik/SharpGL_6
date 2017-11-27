@@ -17,3 +17,26 @@ c:\users\jokci\documents\visual studio 2015\Projects\SharpGL_6\SharpGL_6\obj\Deb
 c:\users\jokci\documents\visual studio 2015\Projects\SharpGL_6\SharpGL_6\obj\Debug\SharpGL_6.exe
 c:\users\jokci\documents\visual studio 2015\Projects\SharpGL_6\SharpGL_6\obj\Debug\SharpGL_6.pdb
 C:\Users\jokci\Documents\Visual Studio 2015\Projects\SharpGL_6\SharpGL_6\bin\Debug\CjClutter.ObjLoader.Loader.dll
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\SharpGL_6.exe.config
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\SharpGL_6.exe
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\SharpGL_6.pdb
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\CjClutter.ObjLoader.Loader.dll
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\mscorlib.dll
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\SharpGL.pdb
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\SharpGL.xml
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\SharpGL.SceneGraph.pdb
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\SharpGL.SceneGraph.xml
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\SharpGL.WinForms.pdb
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\SharpGL.WinForms.xml
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\ru\mscorlib.resources.dll
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\normidna.nlp
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\normnfc.nlp
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\normnfd.nlp
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\normnfkc.nlp
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\bin\Debug\normnfkd.nlp
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\obj\Debug\SharpGL_6.csprojResolveAssemblyReference.cache
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\obj\Debug\SharpGL_6.Form1.resources
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\obj\Debug\SharpGL_6.Properties.Resources.resources
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\obj\Debug\SharpGL_6.csproj.GenerateResource.Cache
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\obj\Debug\SharpGL_6.exe
+C:\Users\User\RiderProjects\SharpGL_6\SharpGL_6\obj\Debug\SharpGL_6.pdb

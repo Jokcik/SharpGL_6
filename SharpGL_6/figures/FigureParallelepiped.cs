@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
-using KB_LAB_5.Classes;
 using SharpGL;
 
 namespace SharpGL_6.figures
